@@ -1,14 +1,14 @@
 //Stack implementation using Stack and Arrays
 #include<stdio.h>
 #include<conio.h>
-#define SIZE 10;
+#define SIZE 10
 
 struct stack{
-    int list[top];
+    int list[SIZE];
     int top;
 }sp;
 //PUSH method
-void push{
+void push(int x){
   if(sp.top==SIZE-1)
     printf("\n Stack is empty UNDERFLOW");
   else
@@ -19,8 +19,10 @@ void push{
 void pop(){
   if(sp.top==-1)
     printf("Stack is Empty");
-  else
-    printf("\n Poped Element is %d", sp.list[sp.top--]);
+  else{
+    printf("\n Poped Element is %d", sp.list[sp.top]);
+    sp.top--;
+  }
   return;
 }
 //PEEK method
@@ -38,7 +40,7 @@ void peek(){
    if(sp.top==-1)
      printf("\n STACK is Empty");
    else
-     for(int i=sp.top;i>=0;i--)
+     for(i=sp.top;i>=0;i--)
        printf("%d\n", sp.list[i]);
    return;
  }
@@ -73,7 +75,3 @@ int main(){
    }
   return 0;
 }
-
-     
-  
-    
